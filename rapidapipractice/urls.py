@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from rapidapipractice.api import views
+from rapidapipractice import api
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', api.views.UserViewSet)
+router.register(r'groups', api.views.GroupViewSet)
 
 #setup automatic URL routing
 #additionally, we include login URLs for the browsable API.
